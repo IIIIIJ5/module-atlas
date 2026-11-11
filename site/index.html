@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="来源可追溯的计算机视觉模型结构图索引。本地提供图片时可放大查看。">
+<title>Module Atlas · 模块图库</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="./"><span class="brand-mark">M<span>↗</span></span><span>MODULE<br>ATLAS</span></a>
+  <div class="side-label">研究图形图谱 / JOURNAL FOCUS</div>
+  <nav id="categories" aria-label="图形分类">
+    <button class="nav active" data-category="">全部图形 <span id="total"></span></button>
+    <button class="nav" data-category="half_intro">首页半栏 Intro <span id="half_introCount"></span></button>
+    <button class="nav" data-category="framework">整体框架 <span id="frameworkCount"></span></button>
+    <button class="nav" data-category="detail">模块细节 <span id="detailCount"></span></button>
+    <button class="nav" data-category="intro">结构对照 <span id="introCount"></span></button>
+  </nav>
+  <button id="favorites" class="nav favorite-filter" aria-pressed="false">我的收藏 <span id="favCount">0</span></button>
+  <div class="sidebar-bottom"><span class="status-dot"></span> 结构索引 · 来源可追溯<p>首页半栏引导图<br>期刊框架与模块细节</p><small>论文图像权利归原权利人。<br>公开索引不授予图片再分发许可。</small></div>
+</aside>
+<main>
+  <header><div class="eyebrow">FIRST PAGE / COMPARISON / FRAMEWORK / MODULE</div><div class="title-row"><h1>从结构中，<em>寻找灵感。</em></h1><span class="edition">VOL. 01<br>OPEN INDEX</span></div><div class="subline"><p>先找结构，再查论文。你拥有的本地图片可在画廊里放大查看。</p><span id="summary"></span></div></header>
+  <section class="toolbar" aria-label="筛选工具"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索论文、模型或关键词…" aria-label="搜索图形"></label><select id="venue" aria-label="会议或期刊"><option value="">全部会议 / 期刊</option></select><select id="year" aria-label="年份"><option value="">全部年份</option></select><button id="reset" class="subtle">重置</button><div class="density"><button id="large" aria-label="大图模式" title="大图模式" aria-pressed="false">▦</button><button id="compact" aria-label="紧凑模式" title="紧凑模式" aria-pressed="true">▤</button></div></section>
+  <div class="journal-bar" role="group" aria-label="来源筛选"><button id="allScope" aria-pressed="true">全部来源</button><button id="journalScope" aria-pressed="false">只看期刊 <span id="journalCount"></span></button><button id="recentScope" aria-pressed="false">近一年已核验 <span id="recentCount"></span></button><button id="newScope" aria-pressed="false">2026 论文 <span id="newCount"></span></button><span class="journal-note">索引窗口：2025-11-11 至 2026-11-11 · 论文图不包含在公开仓库</span></div>
+  <div class="section-heading"><h2 id="sectionTitle">全部图形</h2><span id="resultCount" role="status" aria-live="polite"></span></div>
+  <section id="grid" class="grid" aria-label="模块图画廊"></section>
+  <div id="empty" class="empty" hidden><h2>没有找到匹配的图形</h2><p>试试其他关键词，或清除筛选条件。</p><button id="emptyReset">显示全部图形</button></div>
+  <footer><span>MODULE ATLAS</span><span>有本地图时可放大 · 无图时可直达论文</span><a href="catalog.json" download>下载来源目录</a></footer>
+</main>
+<dialog id="viewer" aria-labelledby="viewerTitle">
+  <div class="viewer-top"><span id="viewerPosition"></span><h2 id="viewerTitle"></h2><button id="closeViewer" class="icon" autofocus aria-label="关闭预览">×</button></div>
+  <div class="viewer-body"><button id="prev" class="step" aria-label="上一张">←</button><div id="stage" tabindex="0" aria-label="高清图片，可滚动查看放大后的细节"><div id="canvas"><img id="fullImage" alt=""></div><p id="imageState" role="status"></p></div><button id="next" class="step" aria-label="下一张">→</button></div>
+  <div class="viewer-controls"><div class="zoom"><button id="zoomOut" aria-label="缩小">−</button><button id="fit" title="恢复适合窗口大小">适应窗口</button><button id="zoomIn" aria-label="放大">+</button><span id="zoomLevel">100%</span></div><span id="imageMeta"></span><div class="viewer-links"><button id="viewerFavorite">☆ 收藏</button><a id="download" download>下载本地 PNG</a><a id="original" target="_blank" rel="noopener">查看本地图 ↗</a><a id="paper" target="_blank" rel="noopener">论文出处 ↗</a></div><p id="sourceVersion"></p></div>
+</dialog>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
