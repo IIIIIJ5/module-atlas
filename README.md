@@ -11,6 +11,8 @@
 
 ## Explore
 
+[Open the public metadata gallery](https://iiiiij5.github.io/module-atlas/) · [Browse the recent-1000 catalog](catalog/recent-1000.json)
+
 | Collection | Indexed | What to look for |
 | --- | ---: | --- |
 | [First-page Intro](docs/taxonomy.md#first-page-intro) | 26 | Compact visual openings on a paper's first page |
@@ -20,7 +22,7 @@
 
 The [catalog](catalog/recent-1000.json) links each entry to its paper, venue, figure number, and (where available) page and crop coordinates. The archive was assembled from official proceedings and publisher or author sources; every included crop passed a diagram-only visual check. See [selection and provenance](docs/provenance.md).
 
-The [`site/`](site/) directory is a metadata-only gallery with the same editorial visual language as the private full-image atlas. To publish it through GitHub Pages, set **Settings → Pages → Build and deployment → GitHub Actions** after creating the repository; the included workflow uploads only `site/` and contains no third-party images.
+The [`site/`](site/) directory is a metadata-only gallery with the same editorial visual language as the private full-image atlas. The [GitHub Pages gallery](https://iiiiij5.github.io/module-atlas/) is published by the included workflow, which uploads only `site/` and contains no third-party images.
 
 ## Local gallery
 
